@@ -31,7 +31,10 @@ var getName = function() {
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
+var welcome = function() {
+  var name = getName();
+  alert("Welcome, " + name);
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -41,7 +44,7 @@ var getName = function() {
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+//Parameter it's the name we give to "label" whatever the value actually is (the actual value is called argument).
 
 //////////////////PROBLEM 5////////////////////
 
@@ -51,8 +54,8 @@ var getName = function() {
 
 
   //Answer Here
-
-
+//0, null, false, undefined, NaN, empty string "".
+//We can do an if statement and compare the value we pass in, with false.
 
 //////////////////PROBLEM 6////////////////////
 
@@ -61,16 +64,19 @@ var getName = function() {
 //Create a function called myName that returns your name
 
   //Code Here
-  
+var myName = function() {
+  return "Bruno";
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+var newMyName = myName;
 
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName());
 
 //////////////////PROBLEM 7////////////////////
 
@@ -79,9 +85,15 @@ var getName = function() {
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+var outerFn = function() {
+  return function() {
+    return "Bruno";
+  }
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn();
 //Now invoke innerFn.
+
+innerFn();
